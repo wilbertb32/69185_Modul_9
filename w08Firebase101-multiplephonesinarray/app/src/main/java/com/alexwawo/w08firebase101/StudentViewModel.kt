@@ -81,7 +81,7 @@ class StudentViewModel : ViewModel() {
                     val name = document.getString("name") ?: ""
                     val program = document.getString("program") ?: ""
                     val phones = document.get("phones") as? List<String> ?: emptyList()
-                    list.add(Student(id, name, program, phones))
+                    list.add(Student(document.id, id, name, program, phones))
                 }
                 students = list
             }
