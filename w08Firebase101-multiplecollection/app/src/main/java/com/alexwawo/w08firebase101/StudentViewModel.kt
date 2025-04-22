@@ -116,7 +116,7 @@ class StudentViewModel : ViewModel() {
                         .get()
                         .addOnSuccessListener { phoneResults ->
                             val phones = phoneResults.mapNotNull { it.getString("number") }
-                            tempList.add(Student(studentId, id, name, program, phones))
+                            tempList.add(Student(id, name, program, phones, studentId))
                             students = tempList.sortedBy { it.name } // refresh list
                         }
                 }
